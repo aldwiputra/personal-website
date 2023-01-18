@@ -134,12 +134,12 @@ button {
 .yellow {
 	color: var(--color-yellow);
 }
-
+/* 
 .blob {
-	filter: blur(250px);
+	filter: blur(150px);
 	z-index: -1;
 	position: absolute;
-	opacity: 0.25;
+	opacity: 0.4;
 }
 
 .blob-red {
@@ -152,7 +152,7 @@ button {
 	top: -12rem;
 	left: 6rem;
 	transform: rotate(-15deg);
-}
+} */
 main {
 	width: clamp(320px, 90%, 1400px);
 	margin-inline: auto;
