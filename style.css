@@ -74,7 +74,7 @@ body::before {
 	background-image: url('./assets/grain-texture.png');
 	background-repeat: repeat;
 	mix-blend-mode: multiply;
-	opacity: 0.75;
+	opacity: 0.25;
 	pointer-events: none;
 }
 
