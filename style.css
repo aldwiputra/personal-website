@@ -38,6 +38,11 @@ dd {
 	margin: 0;
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -51,6 +56,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+	position: relative;
 	min-height: 100vh;
 	padding-block-start: 2rem;
 	text-rendering: optimizeSpeed;
@@ -58,6 +64,18 @@ body {
 	background-color: var(--color-dark-bg);
 	color: var(--color-foreground);
 	font-family: 'Clash Grotesk', sans-serif;
+}
+
+body::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	background-image: url('./assets/grain-texture.png');
+	background-repeat: repeat;
+	mix-blend-mode: multiply;
+	opacity: 0.75;
+	pointer-events: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -117,9 +135,28 @@ button {
 	color: var(--color-yellow);
 }
 
+.blob {
+	filter: blur(250px);
+	z-index: -1;
+	position: absolute;
+	opacity: 0.25;
+}
+
+.blob-red {
+	top: -4rem;
+	transform: rotate(-10deg);
+	left: -5rem;
+}
+
+.blob-yellow {
+	top: -12rem;
+	left: 6rem;
+	transform: rotate(-15deg);
+}
 main {
 	width: clamp(320px, 90%, 1400px);
 	margin-inline: auto;
+	overflow: visible;
 }
 
 header {
@@ -188,13 +225,13 @@ h1 {
 .heading-line {
 	display: block;
 	will-change: transform;
-	transform: translateY(100%) skewY(3deg);
+	transform: translateY(100%);
 	transform-origin: top left;
 	animation-name: text-reveal;
 	animation-duration: 1000ms;
 	animation-delay: 200ms;
 	animation-fill-mode: forwards;
-	animation-timing-function: ease-in;
+	animation-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }
 
 .eyes-wrapper img {
@@ -204,8 +241,33 @@ h1 {
 	transform: translateY(10%);
 }
 
+.hero__image img {
+	aspect-ratio: 1/1;
+}
+
 @keyframes text-reveal {
 	100% {
-		transform: translateY(0%) skewY(0deg);
+		transform: translateY(0%);
+	}
+}
+
+@keyframes opacity-reveal {
+	100% {
+		opacity: 1;
+	}
+}
+
+.animate-opacity {
+	opacity: 0;
+	will-change: opacity;
+	animation-name: opacity-reveal;
+	animation-duration: 1000ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+}
+
+@media screen and (max-width: 40rem) {
+	.hero {
+		flex-direction: column-reverse;
 	}
 }
