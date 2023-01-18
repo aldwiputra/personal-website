@@ -52,6 +52,7 @@ html:focus-within {
 /* Set core body defaults */
 body {
 	min-height: 100vh;
+	padding-block-start: 2rem;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	background-color: var(--color-dark-bg);
@@ -122,7 +123,6 @@ main {
 
 header {
 	font-weight: 500;
-	margin-block-start: 2rem;
 }
 
 .text-logo {
@@ -154,7 +154,7 @@ header {
 }
 
 .hero {
-	margin-block-start: 7rem;
+	margin-block-start: 6rem;
 }
 
 .hero__heading .title {
@@ -168,17 +168,30 @@ header {
 
 .hero__heading .subtext {
 	color: var(--color-foreground-accent);
-	font-size: 1.5rem;
+	font-size: clamp(0.875rem, 1.75vw, 1.5rem);
 	max-width: 37ch;
 	letter-spacing: 0.5px;
 }
 
 h1 {
 	line-height: 1.1;
-	font-size: 4rem;
+	font-size: clamp(2rem, 4.15vw, 4rem);
 	font-weight: 500;
+	white-space: nowrap;
 }
 
 .heading-line {
 	display: block;
+	overflow: hidden;
+}
+
+.eyes-wrapper img {
+	display: inline;
+	margin-inline-start: 1rem;
+	height: 1em;
+	transform: translateY(10%);
+}
+
+.hero__heading {
+	flex: 1;
 }
