@@ -220,6 +220,7 @@ h1 {
 
 .heading-line-wrapper {
 	overflow: hidden;
+	display: block;
 }
 
 .heading-line {
