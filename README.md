@@ -14,8 +14,8 @@ This is a personal website built for the second week's assignment. It has been a
   <img height="50" title="html" alt="Html Logo" src="https://raw.githubusercontent.com/revou-fsse-1/w1-my-personal-website-aldwiputra/main/assets/html.svg">
 </a> &#xa0; &#xa0;
 <a href="https://w3.org">
-  <img height="50" title="css" alt="CSS Logo" src="https://raw.githubusercontent.com/revou-fsse-1/w1-my-personal-website-aldwiputra/main/assets/ccs.svg">
+  <img height="50" title="css" alt="CSS Logo" src="https://raw.githubusercontent.com/revou-fsse-1/w1-my-personal-website-aldwiputra/main/assets/css.svg">
 </a> &#xa0; &#xa0;
 <a href="https://w3.org">
-  <img height="50" title="javascript" alt="Javascript Logo" src="https://raw.githubusercontent.com/revou-fsse-1/w1-my-personal-website-aldwiputra/main/assets/javascript">
+  <img height="50" title="javascript" alt="Javascript Logo" src="https://raw.githubusercontent.com/revou-fsse-1/w1-my-personal-website-aldwiputra/main/assets/javascript.svg">
 </a> &#xa0; &#xa0;
