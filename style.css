@@ -134,25 +134,7 @@ button {
 .yellow {
 	color: var(--color-yellow);
 }
-/* 
-.blob {
-	filter: blur(150px);
-	z-index: -1;
-	position: absolute;
-	opacity: 0.4;
-}
 
-.blob-red {
-	top: -4rem;
-	transform: rotate(-10deg);
-	left: -5rem;
-}
-
-.blob-yellow {
-	top: -12rem;
-	left: 6rem;
-	transform: rotate(-15deg);
-} */
 main {
 	width: clamp(320px, 90%, 1400px);
 	margin-inline: auto;
@@ -242,6 +224,15 @@ h1 {
 	transform: translateY(10%);
 }
 
+.hero__image {
+	-webkit-mask-image: url(./assets/mask-reveal.png);
+	-webkit-mask-size: cover;
+	mask-size: cover;
+	-webkit-mask-position: 0% 0%;
+	animation: mask-reveal 500ms steps(24) forwards;
+	animation-delay: 1000ms;
+}
+
 .hero__image img {
 	aspect-ratio: 1/1;
 }
@@ -255,6 +246,17 @@ h1 {
 @keyframes opacity-reveal {
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes mask-reveal {
+	0% {
+		mask-position: 0% 0%;
+		-webkit-mask-position: 0% 0%;
+	}
+	100% {
+		mask-position: 100% 0%;
+		-webkit-mask-position: 100% 0%;
 	}
 }
 
