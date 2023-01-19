@@ -169,7 +169,7 @@ header {
 	z-index: -1;
 }
 
-.button-wrapper:hover .menu-button::after {
+.menu-button:hover::after {
 	transform: translate(0, 0);
 }
 
@@ -225,12 +225,14 @@ h1 {
 }
 
 .hero__image {
-	-webkit-mask-image: url(./assets/mask-reveal.png);
+	-webkit-mask-image: url(./assets/mask-reveal-final.png);
 	-webkit-mask-size: cover;
-	mask-size: cover;
 	-webkit-mask-position: 0% 0%;
-	animation: mask-reveal 500ms steps(24) forwards;
-	animation-delay: 1000ms;
+	mask-image: url(./assets/mask-reveal-final.png);
+	mask-size: cover;
+	mask-position: 0% 0%;
+	animation: mask-reveal 750ms steps(18) forwards;
+	animation-delay: 800ms;
 }
 
 .hero__image img {
