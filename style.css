@@ -186,7 +186,7 @@ header {
 
 .hero__heading .subtext {
   color: var(--color-foreground-accent);
-  font-size: clamp(0.875rem, 1.75vw, 1.5rem);
+  font-size: clamp(1rem, 1.75vw, 1.5rem);
   max-width: 37ch;
   letter-spacing: 0.5px;
 }
@@ -254,6 +254,15 @@ footer {
 
 .button.back-to-top:hover {
   background-color: var(--color-foreground-accent);
+}
+
+.button.back-to-top {
+  /* padding: 0.5em; */
+  background-color: var(--color-yellow);
+}
+
+.back-to-top > img {
+  max-width: 1.5rem;
 }
 
 @keyframes text-reveal {
