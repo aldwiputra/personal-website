@@ -39,8 +39,7 @@ dd {
   margin: 0;
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
 }
 
@@ -91,7 +90,6 @@ body::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.2);
   background-color: var(--color-dark-bg);
   border-radius: 2rem;
-  /* outline: 1px solid slategrey; */
 }
 
 /* A elements that don't have a class get default styles */
@@ -199,11 +197,23 @@ header {
 
 .text-logo {
   font-size: 1.5rem;
+  transition: font-weight 300ms linear;
+  transform-origin: top left;
 }
 
 .text-logo svg {
   max-height: 1em;
   margin-right: 0.25rem;
+  transform-origin: bottom left;
+  transition: transform 300ms linear;
+}
+
+.text-logo:hover {
+  font-weight: 300;
+}
+
+.text-logo:hover svg {
+  transform: scaleY(0.85);
 }
 
 .button {
