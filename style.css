@@ -197,23 +197,17 @@ header {
 
 .text-logo {
   font-size: 1.5rem;
-  transition: font-weight 300ms linear;
+  transition: font-weight 150ms linear;
   transform-origin: top left;
 }
 
 .text-logo svg {
   max-height: 1em;
   margin-right: 0.25rem;
-  transform-origin: bottom left;
-  transition: transform 300ms linear;
 }
 
 .text-logo:hover {
   font-weight: 300;
-}
-
-.text-logo:hover svg {
-  transform: scaleY(0.85);
 }
 
 .button {
